@@ -30,10 +30,7 @@ class _TodoPageMobileState extends State<TodoPageMobile> {
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Theme.of(context).colorScheme.surface,
           title: const Text('Todos'),
-          actions: [
-            IconButton(onPressed: () => _todoBloc.add(const RefreshTodos()), icon: const Icon(Icons.sync)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.new_label_outlined)),
-          ],
+          actions: [IconButton(onPressed: () => _todoBloc.add(const RefreshTodos()), icon: const Icon(Icons.sync))],
         ),
         body: BlocConsumer<TodoBloc, TodoState>(
           listener: (context, state) {

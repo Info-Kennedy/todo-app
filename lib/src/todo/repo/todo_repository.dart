@@ -205,11 +205,6 @@ class TodoRepository {
     }
   }
 
-  Future<void> manualSync() async {
-    log.d("TodoRepository::manualSync::Manual sync requested");
-    await syncAllData();
-  }
-
   Future<void> _cleanupDuplicates() async {
     try {
       log.d("TodoRepository::_cleanupDuplicates::Cleaning up duplicate entries based on firestore_id");
